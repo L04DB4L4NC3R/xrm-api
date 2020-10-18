@@ -10,8 +10,14 @@ pipeline {
 
 		stage("Npm Audit") {
 			steps {
-				sh 'npm audit'
+				sh '/var/lib/jenkins/reports/audit.sh'
 			}
+		}
+
+		stage("Retire") {
+	               steps {
+                               sh 'retire --path `pwd` --outputformat json --outputfile /var/lib/jenkins/reports/retire.json'
+                       }		
 		}
 	}
 }
