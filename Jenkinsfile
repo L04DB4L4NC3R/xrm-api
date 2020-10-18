@@ -16,7 +16,7 @@ pipeline {
 
 		stage("Retire") {
 	               steps {
-                               sh 'retire --path `pwd` --outputformat json --outputfile /var/lib/jenkins/reports/retire.json'
+                               sh 'retire --path `pwd` --outputformat json --outputpath /var/lib/jenkins/reports/retire.json'
                        }		
 		}
 	}
