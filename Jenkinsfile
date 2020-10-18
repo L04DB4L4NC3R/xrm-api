@@ -9,7 +9,7 @@ pipeline {
 		}
 		stage("Audit") {
 			steps {
-				sh 'npm audit --json'
+				sh '/var/lib/jenkins/scripts/audit.sh'
 			}
 		}
 	}
