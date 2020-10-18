@@ -3,11 +3,15 @@ pipeline {
 
 	stages {
 		stage("Make package-lock") {
-			sh 'npm i --package-lock-only'
+			steps {
+				sh 'npm i --package-lock-only'
+			}
 		}
 
 		stage("Npm Audit") {
-			sh 'npm audit'
+			steps {
+				sh 'npm audit'
+			}
 		}
 	}
 }
