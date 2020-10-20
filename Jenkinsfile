@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage("Make package-lock") {
 			steps {
-				sh '/var/lib/jenkins/node-v12.9.0-linux-x64/bin/npm i --package-lock-only'
+				sh 'npm i --package-lock-only'
 			}
 		}
 
