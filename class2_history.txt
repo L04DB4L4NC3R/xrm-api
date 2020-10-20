@@ -1,0 +1,432 @@
+    1  tmux new -s util
+    2  sudo apt update && sudo apt upgrade -y
+    3  tmux a -t util
+    4  reboot
+    5  ls
+    6  cat /etc/os-release 
+    7  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+    8  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+    9  sudo apt update
+   10  sudo apt install jenkins
+   11  sudo systemctl enable --now jenkins
+   12  sudo ufw allow 8080
+   13  hostname -I
+   14  sudo netstat -nlp | greep LISTEN
+   15  sudo netstat -nlp | grep LISTEN
+   16  sudo apt install jenkins
+   17  sudo systemctl start jenkins
+   18  sudo apt install jenkins
+   19  sudo apt install default-jre
+   20  sudo apt install default-jdk
+   21  scp Downloads/jdk-11.0.7_linux-x64_bin.tar.gz sammy@your_server_ip:~
+   22  sudo apt install software-properties-common
+   23  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EA8CACC073C3DB2A
+   24  sudo add-apt-repository ppa:linuxuprising/java
+   25  sudo apt update
+   26  sudo mkdir -p /var/cache/oracle-jdk11-installer-local/
+   27  sudo cp jdk-11.0.7_linux-x64_bin.tar.gz /var/cache/oracle-jdk11-installer-local/
+   28  sudo apt install oracle-java11-installer-local
+   29  sudo apt install jenkins
+   30  sudo apt install openjdk-11-jre
+   31  sudo apt autoremove
+   32  sudo dpkg ––configure –a
+   33  sudo dpkg ––configure –a | less
+   34  sudo dpkg ––configure –a
+   35  sudo apt-get install –f
+   36  sudo apt-get install –f jenkins
+   37  sudo apt-get remove ––purge package_name
+   38  sudo apt-get remove ––purge package_name openjdk-11-jre
+   39  sudo apt-get remove ––purge openjdk-11-jre
+   40  sudo apt remove ––purge openjdk-11-jre
+   41  sudo apt update
+   42  sudo apt upgrade
+   43  sudo apt remove oracle-java11-installer-local
+   44  sudo apt upgrade
+   45  apt install jenkins
+   46  sudo systemctl enable --now jenkins
+   47  cat /var/lib/jenkins/secrets/initialAdminPassword
+   48  sudo apt install neofetch
+   49  neofetch
+   50  vim ~/.bashrc
+   51  netstat | grep LISTEN
+   52  netstat -nlp
+   53  man netstat
+   54  netstat -nlp | grep LISTEN
+   55  netstat -nlp | grep 8080
+   56  exit
+   57  top
+   58  clear
+   59  exit
+   60  uname -r
+   61  uname -a
+   62  tmux
+   63  tmux new -s testclass1
+   64  ls
+   65  htop
+   66  history
+   67  ls
+   68  tmux
+   69  htop
+   70  uname -a
+   71  tmux new -s test
+   72  tmux a -t test
+   73  tmux new -s test
+   74  ls
+   75  tmux a -t test
+   76  netstat -nlp
+   77  netstat -nlp | grep 8080
+   78  hostname -I
+   79  wget https://nodejs.org/dist/v12.19.0/node-v12.19.0-linux-x64.tar.xz
+   80  ls
+   81  tar -xvzf node-v12.19.0-linux-x64.tar.xz
+   82  tar -xf node-v12.19.0-linux-x64.tar.xz
+   83  ls
+   84  node --version
+   85  cd node-v12.19.0-linux-x64/
+   86  ls
+   87  clear
+   88  ls
+   89  cd bin
+   90  ls
+   91  sudo cp *.* /usr/local/bin
+   92  sudo cp .* /usr/local/bin
+   93  sudo cp ./* /usr/local/bin
+   94  cd
+   95  node --version
+   96  ls
+   97  cd dvna
+   98  vim package.json 
+   99  npm install
+  100  node --version
+  101  npm audit
+  102  sudo rm /usr/local/bin/np*
+  103  sudo rm /usr/local/bin/node
+  104  ls
+  105  cd ..
+  106  ls
+  107  rm -r node-v12.19.0-linux-x64*
+  108  ls
+  109  wget https://nodejs.org/download/release/v10.22.1/node-v10.22.1-aix-ppc64.tar.gz
+  110  ls
+  111  tar -xvf node-v10.22.1-aix-ppc64.tar.gz
+  112  ls
+  113  cd nodenode-v10.22.1-aix-ppc64
+  114  cd node-v10.22.1-aix-ppc64
+  115  ls
+  116  cd bin
+  117  sudo cp ./* /usr/local/bin
+  118  cd ..
+  119  cd dvna
+  120  npm install
+  121  ls
+  122  cd ..
+  123  node --version
+  124  sudo node --version
+  125  node --version
+  126  ls
+  127  sudo rm node-v10.22.1-aix-ppc64
+  128  sudo rm -r node-v10.22.1-aix-ppc64
+  129  ls
+  130  sudo rm -r node-v10.22.1-aix-ppc64.tar.gz
+  131  ls
+  132  sudo rm /usr/local/bin/node
+  133  sudo rm /usr/local/bin/npm
+  134  sudo rm /usr/local/bin/npx
+  135  clear
+  136  ls
+  137  rm ''$'\017'
+  138  wget https://nodejs.org/download/release/v12.9.0/node-v12.9.0-linux-x64.tar.gz
+  139  ls
+  140  tar -xvf node-v12.9.0-linux-x64.tar.gz
+  141  clear
+  142  ls
+  143  cd node-v12.9.0-linux-x64/
+  144  cd bin
+  145  ls
+  146  cp ./* /usr/local/bin
+  147  cd ../..
+  148  cd dvna
+  149  ls
+  150  node --version
+  151  npm install
+  152  cd ..
+  153  cd /usr/local/bin
+  154  ls
+  155  ..
+  156  ls
+  157  cd ..
+  158  cd node-v12.9.0-linux-x64/
+  159  ls
+  160  sudo rm /usr/local/bin/np*
+  161  sudo rm /usr/local/bin/node
+  162  ls
+  163  pwd
+  164  cd bin
+  165  pwd
+  166  cd
+  167  vim ~/.bashrc
+  168  source ~/.bashrc
+  169  node --version
+  170  cd dvna/
+  171  npm install
+  172  vim package.json 
+  173  npm install
+  174  vim package.json
+  175  npm install bcrypt
+  176  sudo npm install bcrypt
+  177  npm install bcrypt
+  178  npm audit --json
+  179  npm audit > ramreport.json
+  180  vim ramreport.json
+  181  npm audit --json > ramreport.json
+  182  vim remreport.json
+  183  vim ramreport.json
+  184  npm audit
+  185  ls
+  186  exit
+  187  tmux a -t test
+  188  tmux list -sessions
+  189  tmux list-sessions
+  190  tmux a -t test
+  191  git clone https://github.com/vallaram/dvna.git
+  192  ls
+  193  clear
+  194  ls
+  195  cd dvna
+  196  ls
+  197  cd ../snap
+  198  ls
+  199  cd..
+  200  cd ..
+  201  clear
+  202  tmux a -t test
+  203  exit
+  204  ls
+  205  clear
+  206  git clone https://github.com/vallaram/myFFCS.git
+  207  ls
+  208  cd myFFCS
+  209  ls
+  210  cd ../cd dvna
+  211  cd ..
+  212  cd dvna
+  213  ls
+  214  cd ..
+  215  cd myFFCS/
+  216  clear
+  217  ls
+  218  npm install
+  219  sudo npm install
+  220  npm audit --json > mfFFCSFile.json
+  221  vim mmFFCSFile.json
+  222  npm audit --json >mfFFCSFile.json
+  223  vim mmFFCSFile.json
+  224  npm install
+  225  cd ..
+  226  cd dvna
+  227  ls
+  228  vim package.json
+  229  cd ..
+  230  l
+  231  cd myFFCS/
+  232  ls
+  233  rm mfFFCSFile.json 
+  234  ls
+  235  cat package.json
+  236  clear
+  237  npm install
+  238  cd ..
+  239  clear
+  240  ls
+  241  git clone https://github.com/vallaram/live-poll.git
+  242  cd live-poll
+  243  ls
+  244  npm install 
+  245  npm audit
+  246  clear
+  247  npm audit --json>livepollfile.json
+  248  ls
+  249  vim livepollfile.json
+  250  clear
+  251  npm audit
+  252  cd ..
+  253  clear
+  254  ls
+  255  git clone https://github.com/vallaram/event_portal.git
+  256  ls
+  257  cd event_portal/
+  258  ls
+  259  npm install
+  260  npm audit
+  261  clear
+  262  npm audit --json > eventportalfile.json
+  263  ls
+  264  vim eventportalfile.json
+  265  pwd
+  266  cp eventportalfile.json /Users/karteekvallapuri/Desktop
+  267  cp eventportalfile.json /Users/karteekvallapuri/Desktop/eventportalfile.json
+  268  scp eventportalfile.json /Users/karteekvallapuri/Desktop
+  269  pwd
+  270  scp /root/event_portal/eventportalfile.json /Users/karteekvallapuri/Desktop
+  271  scp /root@159.65.84.187/event_portal/eventportalfile.json /Users/karteekvallapuri/Desktop
+  272  scp root@159.65.84.187/event_portal/eventportalfile.json /Users/karteekvallapuri/Desktop
+  273  scp root@159.65.84.187:/event_portal/eventportalfile.json /Users/karteekvallapuri/Desktop
+  274  clear
+  275  ls
+  276  vi eventportalfile.json
+  277  exit
+  278  ls
+  279  vim package-lock.json
+  280  cd
+  281  git clone https://github.com/vallaram/xrm-api.git
+  282  ls
+  283  cd xrm-api/
+  284  ls
+  285  clear
+  286  ls
+  287  npm audit
+  288  npm i --package-lock-only
+  289  ls
+  290  npm audit
+  291  npm audit --fix
+  292  npm audit fix
+  293  npm audit
+  294  echo $?
+  295  npm audit
+  296  echo $?
+  297  vim Jenkinsfile
+  298  git status
+  299  git add .
+  300  git commit -m "created the jenkins file"
+  301  git config --global user.email "vallar4327@gmail.com" 
+  302  git commit -m "created the jenkins file"
+  303  git push origin master
+  304  vim Jenkinsfile 
+  305  git add .
+  306  git commit -m "added the steps to jenkins file"
+  307  git push origin master
+  308  npm --version
+  309  which npm
+  310  ls
+  311  npm --version
+  312  cd /vaar/lib/jenkins
+  313  cd /var/lib/jenkins/
+  314  ls
+  315  npm --version
+  316  ls
+  317  su jenkins
+  318  which npm
+  319  chown /root/node-v12.9.0-linux-x64/bin/* jenkins
+  320  chown jenkins /root/node-v12.9.0-linux-x64/bin/*
+  321  su jenkins
+  322  chown jenkins /root/node-v12.9.0-linux-x64/bin
+  323  su jenkins
+  324  cat ~/.bashrc
+  325  su jenkins
+  326  ls
+  327  su jenkins
+  328  npm --version
+  329  cd
+  330  s
+  331  ls
+  332  cd xrm-api/
+  333  sudo npm install -g retire
+  334  npm --version
+  335  npm install -g retire
+  336  ls
+  337  retire --path .
+  338  retire --path . --outputformat json
+  339  apt install jq
+  340  retire --path `pwd` --outputformat json | jq
+  341  retire --path `pwd` --outputformat json > retire_report.json
+  342  retire --path `pwd` --outputformat json --outputpath retire_report.json
+  343  vim retire_report.json 
+  344  ls
+  345  vim Jenkinsfile 
+  346  cd /var/lib/jenkins/
+  347  ls
+  348  cd workspace/
+  349  ls
+  350  cd DVNA-Pipeline
+  351  ls
+  352  cd ..
+  353  mkdir reports
+  354  cd reports/
+  355  ls
+  356  cd
+  357  cd xrm-api/
+  358  ls
+  359  vim Jenkinsfile 
+  360  cd /var/lib/jenkins/
+  361  cd reports/
+  362  ls
+  363  vim audit.sh
+  364  ls ../workspace/
+  365  cd
+  366  cd xrm-api/
+  367  vim Jenkinsfile 
+  368  cd /var/lib/jenkins/
+  369  cd reports/
+  370  cat audit.sh 
+  371  chmod +x audit.sh 
+  372  cd
+  373  cd xrm-api/
+  374  ls
+  375  vim Jenkinsfile 
+  376  git add .
+  377  git commit -m "retirejs step added and script added for audit"
+  378  ls
+  379  mkdir devsecops
+  380  cp /var/lib/jenkins/reports/audit.sh devsecops/
+  381  git add .
+  382  git commit -m "added audit script"
+  383  git push origin master
+  384  ls
+  385  cd ~/.ssh
+  386  ls
+  387  ssh-keygen -t rsa
+  388  cd 
+  389  cd .ssh
+  390  ls
+  391  cat id_rsa.pub 
+  392  vim id_rsa.pub
+  393  ls
+  394  cat id_rsa.pub 
+  395  tmux detach
+  396  cdc
+  397  cd
+  398  cd xrm-api/
+  399  ls
+  400  git remote -v
+  401  git remote remove origin
+  402  git remote add origin git@github.com:vallaram/xrm-api.git
+  403  git remote -v
+  404  git status
+  405  git push origin master
+  406  git remote -v
+  407  python3 --version
+  408  pip3 --version
+  409  cd ..
+  410* 
+  411  cd dvna
+  412  retire --path . --outputformat json --outputfile dvnaretirefile.json
+  413  retire --path . --outputformat json outputfile dvnaretirefile.json
+  414  retire --path . --outputformat json outputpath  dvnaretirefile.json
+  415  retire --path . --outputformat json --outputpath  dvnaretirefile.json
+  416  cd 
+  417  cd xrm-api/
+  418  git fetch origin master
+  419  git rebase origin/master
+  420  ls
+  421  vim Jenkinsfile 
+  422  python3 --version
+  423  pip3 --version
+  424  apt install python3-pip
+  425  pip3 install nodejsscan
+  426  ls
+  427  nodejsscan -d .
+  428  nodejsscan -d . 
+  429  nodejsscan -d . --output nodejsscan_report.json
+  430  vim nodejsscan_report.json 
+  431  npm audit | retire.js 
+  432  history > class2_history.txt
