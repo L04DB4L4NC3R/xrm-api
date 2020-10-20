@@ -16,20 +16,21 @@ pipeline {
 
 		stage("Retire") {
 	               steps {
-                               sh 'retire --path `pwd` --outputformat json --outputpath /var/lib/jenkins/reports/retire.json'
+				sh 'npm i'
+                               sh 'retire --path `pwd` --outputformat json --outputpath /var/lib/jenkins/reports/retire.json --exitwith 0'
                        }		
 		}
 
                   stage("NodeJsScan") {
                        steps {
-                               sh 'nodejsscan -d `pwd` --output nodejsscan_report.json'
+                               sh 'nodejsscan -d `pwd` --output /var/lib/jenkins/reports/nodejsscan_report.json'
                        }
                 }		
 
                 stage ("SCA - EsLint"){
                     steps {
                             sh 'eslint ./*.js > /var/lib/jenkins/reports/eslintreport.json'
-                            sh 'eslint ./lib/*.js >> /var/lib/jenkins/reports/retire.json'
+                            sh 'eslint ./lib/*.js >> /var/lib/jenkins/reports/eslintreport.json'
 			}
 
 		}
