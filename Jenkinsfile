@@ -21,12 +21,6 @@ pipeline {
                        }		
 		}
 
-                  stage("NodeJsScan") {
-                       steps {
-                               sh 'nodejsscan -d `pwd` --output /var/lib/jenkins/reports/nodejsscan_report.json'
-                       }
-                }		
-
                 stage ("SCA - EsLint"){
                     steps {
                             sh 'eslint ./*.js > /var/lib/jenkins/reports/eslintreport.json'
@@ -34,5 +28,11 @@ pipeline {
 			}
 
 		}
+                  stage("NodeJsScan") {
+                       steps {
+                               sh 'nodejsscan -d `pwd` --output /var/lib/jenkins/reports/nodejsscan_report.json'
+                       }
+                }		
+
 	}
 }
