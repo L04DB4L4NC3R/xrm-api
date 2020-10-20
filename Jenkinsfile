@@ -30,6 +30,7 @@ pipeline {
                     steps {
                             sh 'eslint ./*.js > /var/lib/jenkins/reports/eslintreport.json'
                             sh 'eslint ./lib/*.js >> /var/lib/jenkins/reports/retire.json'
+			}
 
-	}
+		}
 }
