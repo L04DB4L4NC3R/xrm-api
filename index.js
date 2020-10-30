@@ -1,6 +1,5 @@
 /*
 * Module's dependencies
-*
 */
 var Util    = require('./lib/util.js');
 var Message = require('./lib/message.js');
