@@ -1,4 +1,5 @@
 #!/bin/sh
 
 echo "hello world"
-exit 1
+eslint ./lib/*.js --fix
+echo $? > /dev/null
