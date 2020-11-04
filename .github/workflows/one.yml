@@ -1,0 +1,13 @@
+name: Testing a simple pipeline
+
+on:
+  push
+
+jobs:
+  test:
+    name: First test job
+    runs-on: ubuntu-latest
+    steps:
+            - name: Checking out code
+              uses: actions/checkout@v2
+            - run: ls
