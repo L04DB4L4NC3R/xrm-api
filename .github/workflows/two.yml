@@ -1,0 +1,23 @@
+name: nodejs CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: nodejs
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: package install
+      - run: npm install --package-lock-only
+      - name: Audit
+      - run: npm audit
+      - name: RetireJS
+      - run: npm install -g retire
+      - run: retire --path `pwd` --outputformat json --exitwith 0
