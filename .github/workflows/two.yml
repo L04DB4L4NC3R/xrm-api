@@ -22,5 +22,7 @@ jobs:
       - name: Generate Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: Audit and retire reports
-          path: ./*.json
+          - name: Audit report
+            path: ./audit-report.json
+          - name: Retire report
+            path: ./retire-report.json
