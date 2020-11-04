@@ -27,7 +27,10 @@ jobs:
             - run: |
                     npm install -g retire
                     retire --path . --outputformat json --outputpath ./retire-report.json --exitwith 0
-            - run: |
-                    ls
-                    cat audit-report.json
-                    cat retire-report.json
+            - name: Generate Artifacts
+              uses: actions/upload-artifact@v2
+              with:
+                      name: reports
+                      path: |
+                              ./audit-report.json
+                              ./retire-report.json
