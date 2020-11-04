@@ -1,0 +1,10 @@
+name: SNYK
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - name: Snyk
+      uses: snyk/actions@0.3.0
+      with:
+        command: test
+        json: true
