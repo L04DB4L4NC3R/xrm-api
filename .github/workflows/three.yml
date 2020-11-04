@@ -1,4 +1,4 @@
-name: nodejs CI
+name: NodeJS CI with Nodejsscan
 on:
   push:
     branches: [ master ]
