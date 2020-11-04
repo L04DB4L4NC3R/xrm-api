@@ -16,13 +16,13 @@ jobs:
           node-version: 12.x
       - run: |
           npm install
-          npm audit --json > audit_report.json || echo Problems Found
+          npm audit --json > audit-report.json || echo Problems Found
           npm install -g retire
           retire --path `pwd` --outputformat json --exitwith 0 --outputpath `pwd`/retire-report.json
       - name: Generate Artifacts
         uses: actions/upload-artifact@v2
         with:
-          - name: Audit report
-            path: ./audit-report.json
-          - name: Retire report
-            path: ./retire-report.json
+          name: Audit & Retire report
+          path: |
+            ./audit-report.json
+            ./retire-report.json
