@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - run: npm install --package-lock-only
+      - run: npm install
       - run: npm audit || echo Problems Found
       - run: npm install -g retire
       - run: retire --path `pwd` --outputformat json --exitwith 0
