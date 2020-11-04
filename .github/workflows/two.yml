@@ -15,6 +15,6 @@ jobs:
         with:
           node-version: 12.x
       - run: npm install
-      - run: npm audit || echo Problems Found
+      - run: npm audit --json > audit_report.json || echo Problems Found
       - run: npm install -g retire
-      - run: retire --path `pwd` --outputformat json --exitwith 0
+      - run: retire --path `pwd` --outputformat json --exitwith 0 --outputpath `pwd`/retire-report.json
