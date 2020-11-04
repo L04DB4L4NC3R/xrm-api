@@ -24,13 +24,12 @@ jobs:
         with:
           python-version: 3.x
           architecture: x64
-      - run: |
-          pip3 install nodejsscan
-          nodejsscan --directory `pwd` --output nodejsscan-report.json
+      - run: pip3 install nodejsscan
+      - run: nodejsscan --directory `pwd` --output nodejsscan-report.json
       - run: |
           wget https://dl.bintray.com/jeremy-long/owasp/dependency-check-5.2.4-release.zip
           unzip dependency-check-5.2.4-release.zip
-          ./dependency-check-5.2.4-release/bin/dependency-check.sh --scan . --format JSON --out depcheck-report.json --prettyPrint
+          ./dependency-check/bin/dependency-check.sh --scan . --format JSON --out depcheck-report.json --prettyPrint
       - name: Generate Artifacts
         uses: actions/upload-artifact@v2
         with:
