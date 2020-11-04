@@ -1,0 +1,141 @@
+    1  useradd -m ram
+    2  passwd
+    3  su - ram
+    4  exit
+    5  ssh root@178.62.36.5
+    6  clear
+    7  apt-get update
+    8  apt-get upgrade
+    9  clear
+   10  useradd -m testuser
+   11  passwd testuser
+   12  su - testuser
+   13  su jenkins
+   14  ls
+   15  chown jenkins dependency-check-5.2.4-release.zip 
+   16  mv dependency-check-5.2.4-release.zip /var/lib/jenkins/
+   17  su jenkins
+   18  sudo apt install unzip
+   19  su jenkins
+   20  su ram
+   21  apt install python3-pip
+   22  pip3 install nodejsscan
+   23  history > class4_history.txt
+    1  useradd -m ram
+    2  passwd
+    3  su - ram
+    4  exit
+    5  ssh root@178.62.36.5
+    6  clear
+    7  apt-get update
+    8  apt-get upgrade
+    9  clear
+   10  useradd -m testuser
+   11  passwd testuser
+   12  su - testuser
+   13  clear
+   14  su ram
+   15  su jenkins
+   16  su ram
+   17  ls
+   18  history >> class4_history.txt 
+    1  cd
+    2  sudo apt install openjdk-11-jdk
+    3  cd
+    4  sudo apt install openjdk-11-jdk
+    5  sudo apt install openjdk-11-jre
+    6  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+    7  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+    8  sudo apt update
+    9  sudo apt install jenkins
+   10  sudo systemctl enable --now jenkins
+   11  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   12  curl ifconfig.me
+   13  clear
+   14  ssh-keygen -t rsa
+   15  ls
+   16  cd ./ssh
+   17  ls -l
+   18  clear
+   19  ls -a
+   20  cd .ssh
+   21  ls
+   22  cat id_rsa.pub
+   23  cd ..
+   24  sudo tmux detach
+   25  git clone git@github.com:vallaram/vulnado.git
+   26  git clone git@github.com:vallaram/xrm-api.git
+   27  clear
+   28  ls
+   29  su jenkins
+   30  cd
+   31  cd xrm-api/
+   32  vim Owasp.Jenkinsfile 
+   33  git status
+   34  git add .
+   35  git commit -m "Owasp depcheck jenkinsfile"
+   36  git config --global user.email "vallar4327@gmail.com"
+   37  git config --global user.name "vallaram"
+   38  git commit -m "Owasp depcheck jenkinsfile"
+   39  git push origin master
+   40  clear
+   41  ls
+   42  cat Jenkinsfile 
+   43  cp Jenkinsfile Nodejs.Jenkinsfile
+   44  vim Nodejs.Jenkinsfile 
+   45  cat Nodejs.Jenkinsfile 
+   46  cd
+   47  cd xrm-api/
+   48  ls
+   49  git status
+   50  cat Nodejs.Jenkinsfile 
+   51  git add .
+   52  git commit -m "Nodejsscan pipeline"
+   53  git push origin master
+   54  clear
+   55  cd /var/lib/jenkins/reports
+   56  ls
+   57  cat owasp.json
+   58  clear
+   59  cd
+   60  ls
+   61  cd xrm-api/
+   62  ls
+   63  cp Jenkinsfile Audit.Jenkinsfile
+   64  vim Audit.Jenkinsfile
+   65  cd
+   66  cd xrm-api/
+   67  sudo npm i -g eslint
+   68  cd 
+   69  cd xrm-api/
+   70  ls
+   71  eslint --init
+   72  cat Audit.Jenkinsfile 
+   73  git status
+   74  git add .
+   75  git commit -m "audit pipeline"
+   76  git push origin master
+   77  cd /var/lib/jenkins/reports/
+   78  ls
+   79  vim nodejsscan_report.json 
+   80  cd
+   81  cd /var/lib/jenkins/reports/
+   82  ls
+   83  vim audit_report.json 
+   84  ls
+   85  cd
+   86  cd xrm-api/
+   87  ls
+   88  cd
+   89  cd xrm-api/
+   90  ls
+   91  mv class* devsecops/
+   92  ls
+   93  git status
+   94  cd devsecops/
+   95  vim class4_history.txt 
+   96  history
+   97  history >> class4_history.txt 
+   98  cd
+   99  cd xrm-api/devsecops/
+  100  history >> class4_history.txt 

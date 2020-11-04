@@ -1,0 +1,30 @@
+# Unauthenticated W3af Scan Config
+plugins
+
+grep all
+grep
+
+audit all
+audit
+
+crawl all, !google_spider, !bing_spider, !spider_man
+crawl
+
+output console,html_file
+output config html_file
+set output_file /home/ram/dast_w3af/w3af-dast-scan.html
+set verbose False
+back
+output config console
+set verbose True
+back
+
+back
+
+target
+set target http://178.62.36.148:9090/login
+back
+
+start
+
+exit

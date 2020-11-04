@@ -1,0 +1,39 @@
+# Unauthenticated W3af Scan Config
+plugins
+
+grep all
+grep
+
+audit all
+audit
+
+crawl all, !google_spider, !bing_spider, !spider_man
+crawl
+
+output console,html_file
+output config html_file
+set output_file /home/ram/dast_w3af/w3af-dast-scan.html
+set verbose False
+back
+output config console
+set verbose False
+back
+
+set username admin
+set password admin
+set username_field username
+set password_field password
+set data_format %u=%U&%p=%P
+set auth_url http://178.62.36.148:9090/login
+set method POST
+set check_url http://178.62.36.148:9090/login
+set check_string 'Logout'
+back 
+
+target
+set target http://178.62.36.148:9090/login
+back
+
+start
+
+exit
