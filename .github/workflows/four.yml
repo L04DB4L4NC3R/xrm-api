@@ -4,10 +4,11 @@ on:
                 branches: [ master ]
 jobs:
         build:
-                runs-on: ubuntu-latest
+                runs-on: ${{ matrix.os }}
                 strategy:
                         matrix:
                                 versions: [10.x, 12.x, 14.x]
+                                os: [ubuntu-18.04, ubuntu-16.04, macos-latest, windows-latest]
                 steps:
                         - name: Checkout
                           uses: actions/checkout@v2
