@@ -18,5 +18,16 @@ jobs:
               with:
                       node-version: 12.x
             - run: ls
-            - run: npm --version
-            - run: node --version
+            - run: |
+                    npm --version
+                    node --version
+            - run: |
+                    npm install
+                    npm audit --json > audit-report.json || echo done
+            - run: |
+                    npm install -g retire
+                    retire --path 'pwd' --outputformat json --outputpath ./retire-report.json --exitwith 0
+            - run: |
+                    ls
+                    cat audit-report.json
+                    cat retire-report.json
