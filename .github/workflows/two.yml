@@ -20,7 +20,7 @@ jobs:
           npm install -g retire
           retire --path `pwd` --outputformat json --exitwith 0 --outputpath `pwd`/retire-report.json
       - name: Generate Artifacts
-        uses: actions/upload-artifacts@v2
+        uses: actions/upload-artifact@v2
         with:
           name: Audit and retire reports
           path: ./*.json
