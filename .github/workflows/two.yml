@@ -15,6 +15,6 @@ jobs:
         with:
           node-version: 12.x
       - run: npm install --package-lock-only
-      - run: npm audit
+      - run: npm audit || echo Problems Found
       - run: npm install -g retire
       - run: retire --path `pwd` --outputformat json --exitwith 0
