@@ -1,0 +1,22 @@
+name: Nodejs Action (two.yml)
+
+on:
+        pull_request:
+                branches: [ master ]
+        push:
+                branches: [ master ]
+
+jobs:
+  test:
+    name: Nodejs Audit
+    runs-on: ubuntu-latest
+    steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+            - name: Setup Node
+              uses: actions/setup-node@v1
+              with:
+                      node-version: 12.x
+            - run: ls
+            - run: npm --version
+            - run: node --version
