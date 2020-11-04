@@ -26,7 +26,7 @@ jobs:
                     npm audit --json > audit-report.json || echo done
             - run: |
                     npm install -g retire
-                    retire --path 'pwd' --outputformat json --outputpath ./retire-report.json --exitwith 0
+                    retire --path . --outputformat json --outputpath ./retire-report.json --exitwith 0
             - run: |
                     ls
                     cat audit-report.json
